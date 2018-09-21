@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+@import url("main.css");
+.tb-fixa td {
+	   width: 200px;
+	   height: 80px;
+	   overflow: auto;
+	   console.log("fui upado");
+}
+.linha-fixa td {
+	   width: 200px;
+	   height: 80px;
+	   overflow: auto;
+}

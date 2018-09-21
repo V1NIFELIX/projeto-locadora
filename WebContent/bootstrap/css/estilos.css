@@ -1,0 +1,29 @@
+.titulo-depoimento {
+	background-color: #0275D8;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #FFF;
+	margin-bottom: 0px;
+	font-size 22px;	
+}
+
+.contato-select, .grupo-radio{
+	width: 50
+	display: inline-block;
+	vertical-align: top;
+}
+
+@media(min-width: 768px) {
+    .projetos-responsivo {
+    width: 50%;
+    float: left;
+    }
+}
+
+.center_div{
+	margin: 0 auto;
+	width: 20%
+}
+.body{
+	 background-color: #C0C0C0
+}
