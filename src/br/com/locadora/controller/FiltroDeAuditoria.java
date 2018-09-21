@@ -5,7 +5,6 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -31,15 +30,15 @@ public class FiltroDeAuditoria implements Filter {
 		HttpServletResponse httpResp = (HttpServletResponse) resp;
 		HttpSession session = httpReq.getSession();
 
-		if (session.getAttribute("usuario.logado") != null || httpReq.getRequestURI().endsWith("login")) {
-
+		if (session.getAttribute("usuario.logado") != null || httpReq.getRequestURI().endsWith("login.jsp") || httpReq.getRequestURI().contains("login")) {
+			
 			chain.doFilter(req, resp);
 
 			
 		} else {
 			httpResp.sendRedirect("login.jsp");
 		}
-
+		
 	}
 
 	@Override
