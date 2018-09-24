@@ -45,12 +45,12 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="http://localhost:8080/projeto-locadora/">Ebix Filmes</a>
+			<a class="navbar-brand" href="http://localhost:8080/projeto-locadora/index.jsp">Ebix Filmes</a>
 		
 			<div class="collapse navbar-collapse" id="collapse-navbar">
 				 <ul class="nav navbar-nav">
 					<li><a href="cliente?acao=inicioCadastro">Cadastrar Cliente</a></li>
-					<li><a href="#">Voltar</a></li>		
+					<li><a href="http://localhost:8080/projeto-locadora/index.jsp">Voltar</a></li>		
 				</ul>			
 			</div>
 		</div>

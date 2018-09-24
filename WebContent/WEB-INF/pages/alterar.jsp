@@ -110,8 +110,9 @@
 			<!-- FAZER ALTERAÇÃO NA DATA DE NASCIMENTO E DEIXAR O INPUT -->
 				<div class="col-xs-6 col-md-4">
 					<label>Nova Data de Nascimento:</label><input type="text"
-						class="form-control" name="dataNascC"><%-- <fmt:formatDate
-						value="${clienteTela.dataNascC}" pattern="dd-MM-yyyy"/></label> --%>
+						class="form-control" name="dataNascC" value="${data}"><fmt:formatDate value="${clienteTela.dataNascC}"
+						pattern="dd/MM/yyyy"/>
+						
 				</div>
 			</div>
 

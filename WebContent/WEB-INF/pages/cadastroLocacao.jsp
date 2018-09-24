@@ -100,7 +100,7 @@
 
 		<div class="collapse navbar-collapse" id="collapse-navbar">
 			<ul class="nav navbar-nav">
-				<li><a href="http://localhost:8080/projeto-locadora/">Voltar</a></li>
+				<li><a href="http://localhost:8080/projeto-locadora/locacao?acao=inicioLocacao">Voltar</a></li>
 
 			</ul>
 		</div>

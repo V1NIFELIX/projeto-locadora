@@ -56,7 +56,7 @@ public class LoginController extends HttpServlet {
 			} else {
 				HttpSession session = req.getSession();
 				session.setAttribute("usuario.logado", email);
-				RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/pages/index.jsp");
+				RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 				dispatcher.forward(req, resp);
 			}
 

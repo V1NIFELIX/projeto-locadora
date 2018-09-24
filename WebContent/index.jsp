@@ -12,14 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script>
-	function login1() {
-		document.forms[0].action = "login?acao=login"
+	function logout() {
+		document.forms[0].action = "cliente?acao=logout"
 		document.forms[0].method = "post";
 		document.forms[0].submit();
 		document.forms[0].action = "";
 
 	}
 </script>
+
+
 
 
 
@@ -35,29 +37,41 @@
 			<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 				class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">Ebix Filmes</a>
+		<a class="navbar-brand" href="http://localhost:8080/projeto-locadora/">Ebix
+			Filmes</a>
 
 		<div class="collapse navbar-collapse" id="collapse-navbar">
 			<ul class="nav navbar-nav">
 				<li><a href="filmes?acao=listarFilmes">Acessar Filmes</a></li>
 				<li><a href="cliente?acao=listar">Acessar Cliente</a></li>
 				<li><a href="locacao?acao=inicioLocacao">Locação</a></li>
-				<li><a href="cliente?acao=logout">Logout</a></li>
 			</ul>
+			<div class="collapse navbar-collapse" id="collapse-navbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Opções<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Alterar Senha</a></li>
+							<li><a href="#">Alterar Email</a></li>
+							<li><a href="#">Suporte - Contato</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a
+								href="http://localhost:8080/projeto-locadora/cliente?acao=logout">Desconectar</a></li>
+						</ul></li>
+				</ul>
+			</div>
+
+
+
+
+
+
+
+
+
 		</div>
-	</div>
 	</nav>
-
-
-
-
-
-
-
-
-
-
-
 
 	<script src="bootstrap/jquery/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>

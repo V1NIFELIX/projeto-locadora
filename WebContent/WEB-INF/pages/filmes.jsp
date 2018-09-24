@@ -14,14 +14,14 @@
 <script>
 	function alterar(idFilmes) {
 		 document.forms[0].action = "filmes?acao=iniciaAlterar&idFilmes="+idFilmes;
-		 document.forms[0].method = "post";
+		 document.forms[0].method = "POST";
 		 document.forms[0].submit();
 		 document.forms[0].action = "";
 		
 	} 
 	function deletar(idFilmes) {
 		 document.forms[0].action = "filmes?acao=delete&idFilmes="+idFilmes;
-		 document.forms[0].method = "post";
+		 document.forms[0].method = "POST";
 		 document.forms[0].submit();
 		 document.forms[0].action = "";
 		
@@ -43,12 +43,12 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="http://localhost:8080/projeto-locadora/">Ebix Filmes</a>
+			<a class="navbar-brand" href="http://localhost:8080/projeto-locadora/index.jsp">Ebix Filmes</a>
 		
 			<div class="collapse navbar-collapse" id="collapse-navbar">
 				 <ul class="nav navbar-nav">
 					<li><a href="filmes?acao=inicioCadastro">Cadastrar Filmes</a></li>
-					<li><a href="http://localhost:8080/projeto-locadora/">Voltar</a></li>
+					<li><a href="http://localhost:8080/projeto-locadora/index.jsp">Voltar</a></li>
 				</ul>
 			</div>
 		</div>

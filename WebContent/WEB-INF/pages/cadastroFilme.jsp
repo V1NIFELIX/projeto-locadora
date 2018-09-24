@@ -18,7 +18,7 @@
 		
 	}
 	function voltar() {
-		document.forms[0].action = "http://localhost:8080/projeto-locadora/"
+		document.forms[0].action = "http://localhost:8080/projeto-locadora/filmes?acao=listarFilmes"
 		document.forms[0].method = "post";
 		document.forms[0].submit();
 		document.forms[0].action = "";
