@@ -38,20 +38,23 @@
 <body>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" aria-expanded="false">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#collapse-navbar"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="http://localhost:8080/projeto-locadora/index.jsp">Ebix Filmes</a>
-		
+			<a class="navbar-brand"
+				href="http://localhost:8080/projeto-locadora/index.jsp">Ebix
+				Filmes</a>
+
 			<div class="collapse navbar-collapse" id="collapse-navbar">
-				 <ul class="nav navbar-nav">
-					<li><a href="cliente?acao=inicioCadastro">Cadastrar Cliente</a></li>
-					<li><a href="http://localhost:8080/projeto-locadora/index.jsp">Voltar</a></li>		
-				</ul>			
+				<ul class="nav navbar-nav">
+					<li><a href="cliente?acao=inicioCadastro">Cadastrar
+							Cliente</a></li>
+					<li><a href="http://localhost:8080/projeto-locadora/index.jsp">Voltar</a></li>
+				</ul>
 			</div>
 		</div>
 	</nav>
@@ -63,12 +66,19 @@
 	<table border="1" class="table table-striped" id="clientes">
 		<thead>
 			<tr>
-				<th style="width: 20%; text-align: center">Nome</th>
-				<th style="width: 12%">CPF:</th>
-				<th style="width: 12%">Data de Nascimento</th>
-				<th style="width: 12%">Senha:</th>
-				<th style="width: 12%">Email:</th>
-				<th style="width: 12%">Endereço</th>
+				<th style="width: 12%; text-align: center">Nome</th>
+				<th style="width: 5%">CPF:</th>
+				<th style="width: 5%">Data de Nascimento</th>
+				<th style="width: 5%">Telefone (1)</th>
+				<th style="width: 5%">Telefone (2)</th>
+				<th style="width: 5%">Senha:</th>
+				<th style="width: 8%">Email:</th>
+				<th style="width: 5%">CEP</th>
+				<th style="width: 8%">Rua</th>
+				<th style="width: 5%">Bairro</th>
+				<th style="width: 5%">Cidade</th>
+				<th style="width: 5%">Estado</th>
+				<th style="width: 3%">Numero</th>
 				<th style="width: 5%"></th>
 				<th style="width: 5%"></th>
 			</tr>
@@ -78,20 +88,28 @@
 				<tr class="linha-fixa">
 					<td id="nomeCliente${cl.idCliente}">${cl.nomeC}</td>
 					<td id="nomeCpf${cl.idCliente}">${cl.cpfC}</td>
-					<td><fmt:formatDate value="${cl.dataNascC}" pattern="dd/MM/yyyy"/>
+					<td><fmt:formatDate value="${cl.dataNascC}"
+							pattern="dd/MM/yyyy" />
+					<td id="telefone${cl.idCliente}">${cl.telefone}</td>
+					<td id="telefone1${cd.idCliente}">${cl.telefone1}</td>
 					<td id="nomeSenha${cl.idCliente}">${cl.senhaC}</td>
 					<td id="nomeEmail${cl.idCliente}">${cl.emailC}</td>
-					<td id="nomeEmail${cl.idCliente}">${cl.endC}</td>
+					<td id="nomeCep${cl.idCliente}">${cl.cep}</td>
+					<td id="nomeEndC${cl.idCliente}">${cl.endC}</td>
+					<td id="nomeBairroC${cl.idCliente}">${cl.bairro}</td>
+					<td id="nomeCidade${cl.idCliente}">${cl.cidade}</td>
+					<td id="nomeEstado${cl.idCliente}">${cl.estado}</td>
+					<td id="nomeNumeroCasaC${cl.idCliente}">${cl.numero}</td>
 					<td>
 						<form>
-							<input type="button" class="btn btn-info" onclick="alterar(${cl.idCliente})"
-								value="Alterar">
+							<input type="button" class="btn btn-info"
+								onclick="alterar(${cl.idCliente})" value="Alterar">
 						</form>
 					</td>
 					<td>
 						<form>
-							<input type="button" class="btn btn-danger" onclick="deletar(${cl.idCliente})"
-								value="Excluir">
+							<input type="button" class="btn btn-danger"
+								onclick="deletar(${cl.idCliente})" value="Excluir">
 						</form>
 					</td>
 				</tr>

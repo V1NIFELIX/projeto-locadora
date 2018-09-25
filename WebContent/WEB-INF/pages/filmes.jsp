@@ -65,8 +65,8 @@
 				<th style="width: 20%; text-align: center">Filme:</th>
 				<th style="width: 15%">Sinopse</th>
 				<th style="width: 1%">Quantidade</th>
-				<th style="width: 15%">Alteração</th>
-				<th style="width: 15%">Exclusão</th>
+				<th style="width: 1%">Alteração</th>
+				<th style="width: 1%">Exclusão</th>
 				
 			</tr>
 		</thead>

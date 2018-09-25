@@ -11,7 +11,13 @@ public class ClienteVO {
 	private String senhaC;
 	private String emailC;
 	private String nomeC;
-	
+	private String cep;
+	private String bairro;
+	private String cidade;
+	private String estado;
+	private String numero;
+	private Integer telefone;
+	private Integer telefone1;
 	
 
 	public String getCpfC() {
@@ -56,6 +62,49 @@ public class ClienteVO {
 	}
 	public void setDataNascC(Date dataNascC) {
 		this.dataNascC = dataNascC;
+	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public Integer getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(Integer telefone) {
+		this.telefone = telefone;
+	}
+	public Integer getTelefone1() {
+		return telefone1;
+	}
+	public void setTelefone1(Integer telefone1) {
+		this.telefone1 = telefone1;
 	}
 
 

@@ -75,13 +75,22 @@ public class ClienteController extends HttpServlet {
 			String nomeC = req.getParameter("nomeC");
 			String cpfC = req.getParameter("cpfC");
 			String dataNascC1 = req.getParameter("dataNascC");
-			DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+			DateFormat df = new SimpleDateFormat("yyyy-MM-dd");			
+			int telefone = Integer.parseInt(req.getParameter("telefone"));
+			int telefone1 = Integer.parseInt(req.getParameter("telefone1"));			
 			Date dataNascC = new Date(df.parse(dataNascC1).getTime());
 			String senhaC = req.getParameter("senhaC");
-			String emailC = req.getParameter("emailC");
+			String emailC = req.getParameter("emailC");			
+			
+			String cep = req.getParameter("cep");
+			String bairro = req.getParameter("bairro");
+			String cidade = req.getParameter("cidade");
+			String estado = req.getParameter("estado");
+			String numero = req.getParameter("numero");			
 			String endC = req.getParameter("endC");
+			
 			ClienteDAO clienteDAO = new ClienteDAO();
-			clienteDAO.cadastro(nomeC, cpfC, dataNascC, senhaC, emailC, endC);
+			clienteDAO.cadastro(nomeC, cpfC, dataNascC, senhaC, emailC, endC, cep, bairro, cidade, estado, numero, telefone, telefone1);
 			ClienteVO clienteVO = new ClienteVO();
 			clienteVO.setNomeC(nomeC);
 			clienteVO.setCpfC(cpfC);
@@ -89,6 +98,13 @@ public class ClienteController extends HttpServlet {
 			clienteVO.setSenhaC(senhaC);
 			clienteVO.setEmailC(emailC);
 			clienteVO.setEndC(endC);
+			clienteVO.setCep(cep);
+			clienteVO.setBairro(bairro);
+			clienteVO.setCidade(cidade);
+			clienteVO.setEstado(estado);
+			clienteVO.setNumero(numero);
+			clienteVO.setTelefone(telefone);
+			clienteVO.setTelefone1(telefone1);
 
 		} catch (ClassNotFoundException | SQLException e) {
 
@@ -143,9 +159,19 @@ public class ClienteController extends HttpServlet {
 			String endC = req.getParameter("endC");
 			String dataNascC1 = req.getParameter("dataNascC");
 			DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+			Integer telefone = Integer.parseInt(req.getParameter("telefone"));
+			Integer telefone1 = Integer.parseInt(req.getParameter("telefone1"));
+			String cep = req.getParameter("cep");
+			String bairro = req.getParameter("bairro");
+			String cidade = req.getParameter("cidade");
+			String estado = req.getParameter("estado");
+			String numero = req.getParameter("numeroCasa");
+			
+			
+			
 			Date dataNascC = new Date(df.parse(dataNascC1).getTime());
 			ClienteDAO clienteDAO = new ClienteDAO();
-			clienteDAO.alterarCliente(idCliente, nomeC, emailC, cpfC, senhaC, endC, dataNascC);
+			clienteDAO.alterarCliente(idCliente, nomeC, emailC, cpfC, senhaC, endC, dataNascC, telefone, telefone1, cep, bairro, cidade, estado, numero);
 			ClienteVO clienteVO = new ClienteVO();
 			clienteVO.setNomeC(nomeC);
 			clienteVO.setEmailC(emailC);
@@ -154,6 +180,13 @@ public class ClienteController extends HttpServlet {
 			clienteVO.setEndC(endC);
 			clienteVO.setIdCliente(idCliente);
 			clienteVO.setDataNascC(dataNascC);
+			clienteVO.setCep(cep);
+			clienteVO.setBairro(bairro);
+			clienteVO.setCidade(cidade);
+			clienteVO.setEstado(estado);
+			clienteVO.setNumero(numero);
+			clienteVO.setTelefone(telefone);
+			clienteVO.setTelefone1(telefone1);
 
 		} catch (Exception e) {
 			System.out.println("erro ao executar o metodo alterar");
