@@ -59,7 +59,14 @@
 		</div>
 	</nav>
 
-
+	<div>
+	<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Digite o nome do cliente">
+  </div>
+  <button type="submit" class="btn btn-default">Buscar</button>
+</form>
+	</div>
 
 
 
@@ -118,5 +125,6 @@
 
 	<script src="bootstrap/jquery/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/filtro.js"></script>
 </body>
 </html>

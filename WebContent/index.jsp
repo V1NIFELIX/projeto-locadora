@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,14 +22,8 @@
 
 	}
 </script>
-
-
-
-
-
 </head>
 <body>
-
 	<nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<button type="button" class="navbar-toggle collapsed"
@@ -61,17 +57,37 @@
 						</ul></li>
 				</ul>
 			</div>
-
-
-
-
-
-
-
-
-
 		</div>
 	</nav>
+
+	<%-- <div class="container-fluid">
+		<table border="1" class="table table-striped" id="clientes">
+			<thead>
+				<tr>
+					<th style="width: 15%; text-align: center">Nome Cliente</th>
+					<th style="width: 15%; text-align: center">CPF</th>
+					<th style="width: 15%; text-align: center">Endereço</th>
+					<th style="width: 15%; text-align: center">Numero</th>
+					<th style="width: 15%; text-align: center">Telefone</th>
+					<th style="width: 15%; text-align: center">Telefone</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="l" items="${listaRelatorio}">
+					<tr class="linha-fixa">
+						<td>${l.nomeC}</td>
+						<td>${l.cpfC}</td>
+						<td>${l.endC}</td>
+						<td>${l.numero}</td>
+						<td>${l.telefone}</td>
+						<td>${l.telefone1}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div> --%>
+
+
 
 	<script src="bootstrap/jquery/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>

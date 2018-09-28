@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -25,29 +25,30 @@
 
 		<div class="collapse navbar-collapse" id="collapse-navbar">
 			<ul class="nav navbar-nav">
-				<li><a href="http://localhost:8080/projeto-locadora/locacao?acao=inicioLocacao">Voltar</a></li>
+				<li><a
+					href="http://localhost:8080/projeto-locadora/locacao?acao=inicioLocacao">Voltar</a></li>
 
 			</ul>
 		</div>
 	</div>
 	</nav>
-	
+
 	<table border="1" class="table table-striped" id="clientes">
 		<thead>
 			<tr>
-				<th style="width: 20%; text-align: center"> Lista de Filmes:</th>
+				<th style="width: 20%; text-align: center">Lista de Filmes:</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="l"	items="${listaLocacaoFilmes}">
+			<c:forEach var="l" items="${listaLocacaoFilmes}">
 				<tr class="linha-fixa">
-				<td>"${l.nomeF}"</td>
-				</tr>	
+					<td>"${l.nomeF}"</td>
+				</tr>
 			</c:forEach>
 		</tbody>
-	</table>	
-		
-	
+	</table>
+
+
 
 
 
